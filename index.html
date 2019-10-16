@@ -3,10 +3,13 @@
   <head>
     <title>Instascan</title>
     <script type="text/javascript" src="instascan.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
   <body>
     <label>Video</label>
-    <video id="preview"></video>
+    <div id="camera">
+      <video id="preview"></video>
+    </div>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
